@@ -1,33 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "input.h"
 
 //**************-----FUNCIONES-----***************
-
-/*
-**************PROTOTIPO*******************
-tipoRetorno    nombreFx  (ListaParametros)  ;
-
-****TIPO DE RETORNO:
-        -INT
-        -FLOAT
-        -CHAR
-        -VOID(no devuelve nada, es una función que va a mostrar un mensaje)
-        -DOUBLE
-        -otros
-
-**** NOMBRE FUNCIÓN:
-        Tengo que poner qué hace.
-        gralmente es un verbo mas sustantivo
-        Ej: sumarNumeros
-
-**** LISTA DE PARÁMETROS
-        los parámetros q va a recibir(int,char,etc)
-
-*/
-
-int getInt(char [], int, int); //va a solicitar un entero
-                    //recibe una cadena de caracteres
-
 
 
 int main()
@@ -48,17 +23,3 @@ int main()
     return 0;
 }
 
-//**********IMPLEMENTACIÓN***********
-                            //limites de validación
-int getInt(char mensaje[], int min , int max){
-
-    int dato;
-    printf("%s", mensaje); //muestro el mensaje q recibe
-    scanf("%d", &dato);
-    while(dato <min || dato > max){
-        printf("Error. Coloque dato entre %d y %d: ", min, max);
-        scanf("%d", &dato);
-    }
-
-    return dato;
-}
